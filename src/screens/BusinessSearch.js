@@ -6,6 +6,7 @@ import SearchBar from "../components/SearchBar";
 import useApi from "../hooks/useApi";
 
 
+
 export default function BusinessSearch() {
     const [searchText, setSearchText] = React.useState('');
     const [apiCall,results,errorMsg] = useApi();
