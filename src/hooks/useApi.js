@@ -4,7 +4,6 @@ import yelpApi from "../api/yelpApi";
 function useApi(){
     const [results, setResults] = React.useState([]);
     const [errorMsg,setErrorMsg] = React.useState(null);
-    
     function apiCall(term) {
         yelpApi.get('/search', {
             params: {
@@ -14,7 +13,7 @@ function useApi(){
             }
         }).then((response) => {
             setResults(response.data.businesses);
-            console.log(response.data.businesses)
+            console.log("-----------------------------------------------------------------")
         }).catch((err) => {
             console.log(err)
             setErrorMsg("Something went wrong")

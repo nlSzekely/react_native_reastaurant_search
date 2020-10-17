@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Searchbar } from 'react-native-paper';
 import {StyleSheet} from "react-native";
 
+
+
 const MySearchBar = (props) => {
   
   return (
@@ -12,6 +14,8 @@ const MySearchBar = (props) => {
       onEndEditing={()=>{props.onSubmit()}}
       value={props.searchText}
     />
+    
+
   );
 };
 
