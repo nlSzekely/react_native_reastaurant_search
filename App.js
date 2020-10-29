@@ -1,12 +1,13 @@
 // In App.js in a new project
 
 import * as React from 'react';
-import { View, Text } from 'react-native';
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // screens
 import BusinessSearch from "./src/screens/BusinessSearch";
+import RestaurantDetail from  "./src/screens/RestaurantDetail";
 
 
 
@@ -20,6 +21,7 @@ function App() {
       screenOptions={{ gestureEnabled: false }}
       >
         <Stack.Screen name="BusinessSearch" component={BusinessSearch} />
+        <Stack.Screen name="RestaurantDetail" component={RestaurantDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

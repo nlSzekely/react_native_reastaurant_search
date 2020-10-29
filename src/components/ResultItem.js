@@ -18,14 +18,14 @@ export default function ResultItem(props) {
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal:10,
-        marginVertical:10
+        marginHorizontal: 10,
+        marginVertical: 10
     },
     image: {
         width: 250,
         height: 120,
         borderRadius: 4,
-        marginBottom:5
+        marginBottom: 5
     },
     name: {
         fontWeight: "bold"

@@ -1,10 +1,12 @@
 import React from 'react'
 import { View, Text,StyleSheet, FlatList } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native';
 
 // components
 import ResultItem from "./ResultItem";
-
-export default function ResultsList(props) {
+function ResultsList(props) {
+    const navigation = useNavigation();
     return (
         <View>
             <Text style={styles.title}>{props.title}</Text>
@@ -14,12 +16,18 @@ export default function ResultsList(props) {
                 showsHorizontalScrollIndicator={false}
                 keyExtractor={(item)=> item.id}
                 renderItem={({item})=>{
-                return <ResultItem item={item} />
+                return (
+                    <TouchableOpacity onPress={()=>{navigation.navigate("RestaurantDetail",{id:item.id})}}>
+                        <ResultItem item={item} />  
+                    </TouchableOpacity>
+                )
                 }}
             />
         </View>
     )
 }
+
+export default  ResultsList
 
 const styles = StyleSheet.create({
 
